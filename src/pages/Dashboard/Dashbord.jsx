@@ -1,16 +1,16 @@
 import React from 'react'
-import Sidebar from "../../components/UI/Sidebar/Sidebar";
-import GeneralPage from '../GeneralPage/GeneralPage';
-import Chat from "../../components/UI/Chat/Chat";
-
+import Sidebar from '../../components/UI/Sidebar/Sidebar'
+import GeneralPage from '../GeneralPage/GeneralPage'
+import Chat from '../../components/UI/Chat/Chat'
 
 const Dashbord = () => {
   return (
-    <div>Dashbord
+    <div>
+      Dashbord
       <div>
-        <Sidebar/>
-        <GeneralPage/>
-        <Chat/>
+        <Sidebar />
+        <GeneralPage />
+        <Chat />
       </div>
     </div>
   )
