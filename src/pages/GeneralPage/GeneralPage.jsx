@@ -1,7 +1,14 @@
-import React from 'react'
+import styled from "styled-components"
+import GeneralPageHeader from "./components/GeneralPageHeader/GeneralPageHeader"
+
+
+
+const GeneralPageWrap = styled.div`
+width: 67%;
+`
 
 const GeneralPage = () => {
-  return <div>GeneralPage</div>
+  return <GeneralPageWrap><GeneralPageHeader/></GeneralPageWrap>
 }
 
 export default GeneralPage
