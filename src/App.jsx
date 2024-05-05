@@ -1,11 +1,12 @@
 import Dashbord from '../src/pages/Dashboard/Dashbord'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import './styles/commonCss.css'
 
 function App() {
   return (
     <>
-      <Dashbord />
+      <div className="app">
+        <Dashbord />
+      </div>
     </>
   )
 }
