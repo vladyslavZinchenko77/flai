@@ -2,17 +2,15 @@ import React from 'react'
 import Sidebar from '../../components/UI/Sidebar/Sidebar'
 import GeneralPage from '../GeneralPage/GeneralPage'
 import Chat from '../../components/UI/Chat/Chat'
+import Flex from '../../components/Common/Flex/Flex'
 
 const Dashbord = () => {
   return (
-    <div>
-      Dashbord
-      <div>
-        <Sidebar />
-        <GeneralPage />
-        <Chat />
-      </div>
-    </div>
+    <Flex>
+      <Sidebar />
+      <GeneralPage />
+      <Chat />
+    </Flex>
   )
 }
 

@@ -6,9 +6,9 @@ import burgerIcon from '../../../assets/svg/burger-icon.svg'
 
 const SvgIcon = ({ name, ...props }) => {
   const icons = {
-    bell: bellIcon,
-    settings: settingsIcon,
-    burger: burgerIcon,
+    'bell': bellIcon,
+    'settings': settingsIcon,
+    'burger': burgerIcon,
   }
 
   const iconUrl = icons[name]
