@@ -4,13 +4,14 @@ import SectionTitle from '../../../../components/Common/SectionTitle/SectionTitl
 import SvgIcon from '../../../../components/Common/SvgIcon/SvgIcon'
 import { Tabs } from 'antd'
 import BaseTab from './BaseTab/BaseTab'
+import AdvancedTab from './AdvancedTab/AdvancedTab'
 
 const { TabPane } = Tabs
 
 const StyledTabs = styled(Tabs)`
   .ant-tabs-nav {
     .ant-tabs-tab {
-      color: #8e8f92; 
+      color: #8e8f92;
     }
 
     .ant-tabs-tab-active {
@@ -45,7 +46,7 @@ const RecommendationsSection = () => {
           }
           key="2"
         >
-          Content of Tab Pane 2
+          <AdvancedTab />
         </TabPane>
       </StyledTabs>
     </SectionContainer>

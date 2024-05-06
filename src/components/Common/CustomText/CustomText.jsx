@@ -5,6 +5,5 @@ const CustomText = styled.p`
   font-size: ${(props) => props.fontSize};
   margin: ${(props) => props.margin};
   font-weight: 600;
-  
 `
 export default CustomText

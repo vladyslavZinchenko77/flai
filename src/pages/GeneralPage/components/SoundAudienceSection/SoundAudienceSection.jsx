@@ -24,7 +24,9 @@ const SoundAudienceSection = () => {
   return (
     <SectionContainer>
       <section>
-        <SectionTitle icon={<SvgIcon name={'people'}/>}>Sound Audience</SectionTitle>
+        <SectionTitle icon={<SvgIcon name={'people'} />}>
+          Sound Audience
+        </SectionTitle>
 
         <Flex justifyContent="space-between" margin="30px 0 0 0">
           <PrograssesContainer>

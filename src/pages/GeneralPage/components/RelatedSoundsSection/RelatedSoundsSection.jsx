@@ -25,8 +25,9 @@ const RelatedSoundsSection = () => {
   return (
     <SectionContainer>
       <section>
-       
-        <SectionTitle icon={<SvgIcon  name={'related'}/>}><span className='colored'>Related</span>  Sounds</SectionTitle>
+        <SectionTitle icon={<SvgIcon name={'related'} />}>
+          <span className="colored">Related</span> Sounds
+        </SectionTitle>
         <NotifyMeContainer>
           <NotifyMe>
             <SvgIcon name="bell-clipart" />
