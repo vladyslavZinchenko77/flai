@@ -25,7 +25,9 @@ const SoundAudienceSection = () => {
       <section>
         <Flex>
           <SvgIcon name={'people'} margin={'0 6px 0 0'} />
-          <SectionTitleStyled>Sound Audience</SectionTitleStyled>
+          <SectionTitleStyled fontsize="20px">
+            Sound Audience
+          </SectionTitleStyled>
         </Flex>
 
         <Flex justifyContent="space-between" margin="30px 0 0 0">
