@@ -17,8 +17,12 @@ const YellowBtnStyled = styled.button`
   }
 `
 
-const YellowBtn = ({ children, ...props }) => {
-  return <YellowBtnStyled {...props}>{children}</YellowBtnStyled>
+const YellowBtn = ({ children, onClick, ...props }) => {
+  return (
+    <YellowBtnStyled type="button" onClick={onClick} {...props}>
+      {children}
+    </YellowBtnStyled>
+  )
 }
 
 export default YellowBtn
