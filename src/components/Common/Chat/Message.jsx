@@ -1,12 +1,10 @@
-import { Avatar, Divider} from 'antd'
+import { Avatar, Divider } from 'antd'
 import Flex from '../Flex/Flex'
 import styled from 'styled-components'
 
-
-
 const MessageContainer = styled.div`
-margin-top: 24px;
-padding: 24px 15px 0 15px;
+  margin-top: 24px;
+  padding: 24px 15px 0 15px;
 `
 
 const HeaderMessage = styled.div`
@@ -31,13 +29,11 @@ const HeaderMessage = styled.div`
   }
 `
 const MessageText = styled.p`
-
-color: #ffffff;
-font-family: Inconsolata;
-font-size: 16px;
-font-weight: 600;
-line-height: 1.6;
-
+  color: #ffffff;
+  font-family: Inconsolata;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
 `
 
 const Message = ({ name, time, avatarUrl, text }) => {
@@ -49,8 +45,8 @@ const Message = ({ name, time, avatarUrl, text }) => {
         </Flex>
         <p className="message-time">{time}</p>
       </HeaderMessage>
-      <MessageText >{text}</MessageText >
-      <Divider style={{backgroundColor: 'grey', marginTop: 15}}/>
+      <MessageText>{text}</MessageText>
+      <Divider style={{ backgroundColor: 'grey', marginTop: 15 }} />
     </MessageContainer>
   )
 }

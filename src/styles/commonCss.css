@@ -24,19 +24,19 @@
 }
 
 
-/* .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: @yellow;
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: yellow;
     text-shadow: 0 0 0.25px currentcolor;
   }
   
   .ant-tabs .ant-tabs-tab-btn {
     outline: none;
-    color: @white;
+    color: grey;
     transition: all 0.3s;
   }
   
   .ant-tabs .ant-tabs-ink-bar {
     position: absolute;
-    background: @yellow;
+    background: yellow;
     pointer-events: none;
-  } */
+  }

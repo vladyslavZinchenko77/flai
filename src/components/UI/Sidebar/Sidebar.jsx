@@ -6,6 +6,7 @@ import BurgerBtn from './components/BurgerBtn/BurgerBtn'
 import animoji from '../../../assets/jpg/animoji.jpeg'
 
 const SidebarWrapper = styled.div`
+  position: fixed;
   width: 90px;
   height: 100vh;
   background: rgba(49, 50, 52, 0.25);
