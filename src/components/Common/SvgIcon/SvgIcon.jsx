@@ -55,7 +55,7 @@ const SvgIcon = ({ name, margin, ...props }) => {
     'related': relatedIcon,
     'bell-clipart': bellClipartIcon,
     'stars': starsIcon,
-    'subitem-line' : linSubItemIcon,
+    'subitem-line': linSubItemIcon,
   }
 
   const iconUrl = icons[name]

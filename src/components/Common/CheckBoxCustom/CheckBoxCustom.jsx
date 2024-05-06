@@ -20,14 +20,22 @@ const CheckBoxContainer = styled.div`
     height: 50%;
     background-color: #d1fd0a;
   }
+  .disable {
+    background-color: none;
+  }
 `
 
-const CheckBoxCustom = ({ margin }) => {
-  const [isChecked, setIsChecked] = useState(true)
+const CheckBoxCustom = ({
+  margin,
+  defaultChecked = false,
+  disabled = false,
+}) => {
+  const [isChecked, setIsChecked] = useState(defaultChecked)
 
   return (
     <CheckBoxContainer
       margin={margin}
+      disabled={disabled}
       onClick={() => {
         setIsChecked(!isChecked)
       }}
