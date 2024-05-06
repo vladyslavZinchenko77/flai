@@ -15,7 +15,7 @@ const GeneralPage = () => {
     <GeneralPageWrap>
       <GeneralPageHeader />
       <MainInfoSection />
-      <GrowthSection/>
+      <GrowthSection />
       <SoundAudienceSection />
       <RelatedSoundsSection />
       <RecommendationsSection />
