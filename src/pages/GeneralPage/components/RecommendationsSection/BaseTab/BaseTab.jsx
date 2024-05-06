@@ -44,8 +44,7 @@ const RecomendationItemNoActive = styled.div`
 `
 
 const BaseTab = () => {
-const [isShowDuration, setIsShowDuration] = useState(true)
-
+  const [isShowDuration, setIsShowDuration] = useState(true)
 
   return (
     <>
@@ -75,7 +74,7 @@ const [isShowDuration, setIsShowDuration] = useState(true)
           </RecomendationItem>
           <RecomendationSubItem>
             <SvgIcon name="subitem-line" margin={'0 10px 0 10px'} />
-            <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={true}/>
+            <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={true} />
 
             <CustomText color="#FFFFFF">
               Duration for segments of your sound promo

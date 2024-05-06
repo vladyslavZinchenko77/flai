@@ -25,6 +25,7 @@ import relatedIcon from '../../../assets/svg/related.svg'
 import bellClipartIcon from '../../../assets/svg/bell-clipart.svg'
 import starsIcon from '../../../assets/svg/stars.svg'
 import linSubItemIcon from '../../../assets/svg/line-subitem.svg'
+import plaineIcon from '../../../assets/svg/plane.svg'
 
 const IconImg = styled.img`
   margin: ${(props) => props.margin};
@@ -56,6 +57,7 @@ const SvgIcon = ({ name, margin, ...props }) => {
     'bell-clipart': bellClipartIcon,
     'stars': starsIcon,
     'subitem-line': linSubItemIcon,
+    'plane': plaineIcon,
   }
 
   const iconUrl = icons[name]
