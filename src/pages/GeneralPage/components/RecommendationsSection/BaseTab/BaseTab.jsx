@@ -35,6 +35,11 @@ const RecomendationSubItem = styled.div`
   align-items: center;
   margin-top: 20px;
 `
+
+const RecomendationItemNoActiveWrap= styled.div`
+display: inline-block;
+`
+
 const RecomendationItemNoActive = styled.div`
   display: flex;
   align-items: center;
@@ -90,12 +95,14 @@ const BaseTab = () => {
           </RecomendationSubItem>
         </Recomendation>
         <Recomendation>
+          <RecomendationItemNoActiveWrap>
           <RecomendationItemNoActive>
             <CheckBoxCustom margin={'0 10px 0 0'} />
             <CustomText fontsize="12px" color="#8E8F92">
               Release day
             </CustomText>
           </RecomendationItemNoActive>
+          </RecomendationItemNoActiveWrap>
         </Recomendation>
         <Recomendation>
           <RecomendationItem>
@@ -104,6 +111,7 @@ const BaseTab = () => {
           </RecomendationItem>
         </Recomendation>
         <Recomendation>
+          <RecomendationItemNoActiveWrap>
           <RecomendationItemNoActive>
             <CheckBoxCustom margin={'0 10px 0 0'} />
             <CustomText fontsize="12px" color="#8E8F92">
@@ -114,8 +122,10 @@ const BaseTab = () => {
               Coming Soon
             </CustomText>
           </RecomendationItemNoActive>
+          </RecomendationItemNoActiveWrap>
         </Recomendation>
         <Recomendation>
+          <RecomendationItemNoActiveWrap>
           <RecomendationItemNoActive>
             <CheckBoxCustom margin={'0 10px 0 0'} />
             <CustomText fontsize="12px" color="#8E8F92">
@@ -126,6 +136,7 @@ const BaseTab = () => {
               Coming Soon
             </CustomText>
           </RecomendationItemNoActive>
+          </RecomendationItemNoActiveWrap>
         </Recomendation>
       </RecomendationsGroup>
     </>
