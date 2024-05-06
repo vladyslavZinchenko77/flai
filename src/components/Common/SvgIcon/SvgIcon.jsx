@@ -14,6 +14,8 @@ import tikTokIcon from '../../../assets/svg/tik-tok.svg'
 import lockIcon from '../../../assets/svg/lock.svg'
 import canadaIcon from '../../../assets/svg/Canada.svg'
 import playWithoutCircleIcon from '../../../assets/svg/play-simple.svg'
+import peopleIcon from '../../../assets/svg/people.svg'
+import beautyIcon from '../../../assets/svg/beauty.svg'
 
 const IconImg = styled.img`
   margin: ${(props) => props.margin};
@@ -34,6 +36,8 @@ const SvgIcon = ({ name, margin, ...props }) => {
     'lock': lockIcon,
     'canada': canadaIcon,
     'play-simple': playWithoutCircleIcon,
+    'people': peopleIcon,
+    'beauty': beautyIcon,
   }
 
   const iconUrl = icons[name]
