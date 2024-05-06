@@ -16,6 +16,11 @@ import canadaIcon from '../../../assets/svg/Canada.svg'
 import playWithoutCircleIcon from '../../../assets/svg/play-simple.svg'
 import peopleIcon from '../../../assets/svg/people.svg'
 import beautyIcon from '../../../assets/svg/beauty.svg'
+import musicIcon from '../../../assets/svg/music.svg'
+import travelIcon from '../../../assets/svg/travel.svg'
+import showIcon from '../../../assets/svg/show.svg'
+import healthIcon from '../../../assets/svg/health.svg'
+import otherIcon from '../../../assets/svg/other.svg'
 
 const IconImg = styled.img`
   margin: ${(props) => props.margin};
@@ -38,6 +43,11 @@ const SvgIcon = ({ name, margin, ...props }) => {
     'play-simple': playWithoutCircleIcon,
     'people': peopleIcon,
     'beauty': beautyIcon,
+    'music': musicIcon,
+    'travel': travelIcon,
+    'show': showIcon,
+    'health': healthIcon,
+    'other': otherIcon,
   }
 
   const iconUrl = icons[name]
