@@ -2,6 +2,7 @@ import SvgIcon from '../../../../components/Common/SvgIcon/SvgIcon'
 import styled from 'styled-components'
 import HorizontalProgress from '../../../../components/Common/HorizontalProgress/HorizontalProgress'
 import Flex from '../../../../components/Common/Flex/Flex'
+import SectionTitle from '../../../../components/Common/SectionTitle/SectionTitle'
 
 const SectionContainer = styled.div`
   padding: 0 40px;
@@ -23,12 +24,7 @@ const SoundAudienceSection = () => {
   return (
     <SectionContainer>
       <section>
-        <Flex>
-          <SvgIcon name={'people'} margin={'0 6px 0 0'} />
-          <SectionTitleStyled fontsize="20px">
-            Sound Audience
-          </SectionTitleStyled>
-        </Flex>
+        <SectionTitle icon={<SvgIcon name={'people'}/>}>Sound Audience</SectionTitle>
 
         <Flex justifyContent="space-between" margin="30px 0 0 0">
           <PrograssesContainer>

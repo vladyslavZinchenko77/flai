@@ -10,7 +10,7 @@ const { TabPane } = Tabs
 const StyledTabs = styled(Tabs)`
   .ant-tabs-nav {
     .ant-tabs-tab {
-      color: #8e8f92; /* Цвет текста неактивных вкладок */
+      color: #8e8f92; 
     }
 
     .ant-tabs-tab-active {

@@ -3,6 +3,7 @@ import SvgIcon from '../../../../components/Common/SvgIcon/SvgIcon'
 import Flex from '../../../../components/Common/Flex/Flex'
 import CustomText from '../../../../components/Common/CustomText/CustomText'
 import YellowBtn from '../../../../components/Common/YellowBtn/YellowBtn'
+import SectionTitle from '../../../../components/Common/SectionTitle/SectionTitle'
 
 const SectionContainer = styled.div`
   padding: 0 40px;
@@ -24,15 +25,8 @@ const RelatedSoundsSection = () => {
   return (
     <SectionContainer>
       <section>
-        <Flex>
-          <SvgIcon name={'related'} margin={'0 6px 0 0'} />
-          <CustomText fontsize="20px" color="#D1FD0A">
-            Related
-          </CustomText>
-          <CustomText fontsize="20px" color="#FFFFFF">
-            Sounds
-          </CustomText>
-        </Flex>
+       
+        <SectionTitle icon={<SvgIcon  name={'related'}/>}><span className='colored'>Related</span>  Sounds</SectionTitle>
         <NotifyMeContainer>
           <NotifyMe>
             <SvgIcon name="bell-clipart" />

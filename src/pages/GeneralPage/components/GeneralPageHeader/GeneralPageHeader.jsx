@@ -1,12 +1,18 @@
 import styled from 'styled-components'
 import SvgIcon from '../../../../components/Common/SvgIcon/SvgIcon'
 
+
+const SectionContainer = styled.div`
+  padding: 0 40px;
+
+`
+
 const HeaderWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 13px 40px 0 40px;
+
 `
 
 const HeaderTitle = styled.h4`
@@ -57,6 +63,7 @@ const HeaderBtn = styled.button`
 
 const GeneralPageHeader = () => {
   return (
+    <SectionContainer>
     <HeaderWrapper>
       <HeaderTitle>AI Prediction</HeaderTitle>
       <HeaderUpdateGroup>
@@ -77,6 +84,7 @@ const GeneralPageHeader = () => {
         </HeaderBtnGroup>
       </HeaderUpdateGroup>
     </HeaderWrapper>
+    </SectionContainer>
   )
 }
 

@@ -4,7 +4,7 @@ import Flex from '../../../../../components/Common/Flex/Flex'
 
 const Keywords = () => {
   return (
-    <div>
+    
       <Flex>
         <CustomText fontSize="12px" color="#8E8F92">
           Keywords:
@@ -56,7 +56,7 @@ const Keywords = () => {
           </Tag>
         </Flex>
       </Flex>
-    </div>
+  
   )
 }
 

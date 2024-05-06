@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const TitleSectionStyled = styled.div`
   display: flex;
   align-items: center;
+
   .title {
     color: #ffffff;
     font-family: Montserrat;
