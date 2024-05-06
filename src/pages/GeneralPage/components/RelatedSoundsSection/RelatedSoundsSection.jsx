@@ -39,7 +39,14 @@ const RelatedSoundsSection = () => {
             <CustomText fontsize="12px" color="#FFFFFF">
               Notify me when these features start working
             </CustomText>
-            <YellowBtn margin=" 0 0 0 10px">Notify Me</YellowBtn>
+            <YellowBtn
+              margin=" 0 0 0 10px"
+              onClick={() => {
+                console.log('Notify Me')
+              }}
+            >
+              Notify Me
+            </YellowBtn>
           </NotifyMe>
         </NotifyMeContainer>
       </section>

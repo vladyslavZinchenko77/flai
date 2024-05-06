@@ -23,6 +23,8 @@ import healthIcon from '../../../assets/svg/health.svg'
 import otherIcon from '../../../assets/svg/other.svg'
 import relatedIcon from '../../../assets/svg/related.svg'
 import bellClipartIcon from '../../../assets/svg/bell-clipart.svg'
+import starsIcon from '../../../assets/svg/stars.svg'
+import linSubItemIcon from '../../../assets/svg/line-subitem.svg'
 
 const IconImg = styled.img`
   margin: ${(props) => props.margin};
@@ -52,6 +54,8 @@ const SvgIcon = ({ name, margin, ...props }) => {
     'other': otherIcon,
     'related': relatedIcon,
     'bell-clipart': bellClipartIcon,
+    'stars': starsIcon,
+    'subitem-line': linSubItemIcon,
   }
 
   const iconUrl = icons[name]
