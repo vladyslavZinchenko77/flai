@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import GeneralPageHeader from './components/GeneralPageHeader/GeneralPageHeader'
 import MainInfoSection from './components/MainInfoSection/MainInfoSection'
+import SoundAudienceSection from './components/SoundAudienceSection/SoundAudienceSection'
+import RelatedSoundsSection from './components/RelatedSoundsSection/RelatedSoundsSection'
 
 const GeneralPageWrap = styled.div`
   width: 67%;
@@ -11,6 +13,8 @@ const GeneralPage = () => {
     <GeneralPageWrap>
       <GeneralPageHeader />
       <MainInfoSection />
+      <SoundAudienceSection />
+      <RelatedSoundsSection />
     </GeneralPageWrap>
   )
 }
