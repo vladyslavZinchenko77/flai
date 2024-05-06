@@ -8,6 +8,7 @@ import GrowthSection from './components/GrowthSection/GrowthSection'
 
 const GeneralPageWrap = styled.div`
   width: 67%;
+  margin-left: 103px;
 `
 
 const GeneralPage = () => {
