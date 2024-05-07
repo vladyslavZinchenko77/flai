@@ -4,9 +4,9 @@ import Flex from '../../../../../components/Common/Flex/Flex'
 import { useUserStore } from '../../../../../store/store'
 
 const Keywords = () => {
-  const { user } = useUserStore(); 
+  const { user } = useUserStore()
 
-  const keywords = user.songs.length > 0 ? user.songs[0].keywords : [];
+  const keywords = user.songs.length > 0 ? user.songs[0].keywords : []
 
   return (
     <Flex>

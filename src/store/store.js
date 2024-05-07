@@ -32,7 +32,6 @@ export const useUserStore = create((set) => ({
           'Crimson dawn',
           'Echoes of silence',
         ],
-        
       },
     ],
   },

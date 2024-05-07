@@ -16,10 +16,9 @@ const Preview = styled.div`
 `
 
 const GeneralInfo = () => {
-  const { user } = useUserStore(); 
+  const { user } = useUserStore()
 
-
-  const song = user.songs.length > 0 ? user.songs[0] : null;
+  const song = user.songs.length > 0 ? user.songs[0] : null
 
   return (
     <Flex>
