@@ -28,10 +28,10 @@ const GeneralInfo = () => {
       </Preview>
       <div>
         <Flex>
-          <CustomText fontSize="12px" color="#8E8F92" >
+          <CustomText fontSize="12px" color="#8E8F92">
             <Flex alignItems="center">
-            {user.isOfficial ? 'Official Artist' : 'Artist'}
-            {user.isOfficial && <SvgIcon name="info" margin={"0 0 0 5px"} />}
+              {user.isOfficial ? 'Official Artist' : 'Artist'}
+              {user.isOfficial && <SvgIcon name="info" margin={'0 0 0 5px'} />}
             </Flex>
           </CustomText>
         </Flex>
@@ -41,7 +41,16 @@ const GeneralInfo = () => {
         <CustomText margin="6px 0 0" fontSize="14px" color="#ffffff">
           {song ? song.genre : ''}
         </CustomText>
-        <Tag  style={{marginTop: 8, fontSize: 12, color:"#6993FF", background: 'rgb(105, 147, 255, 0.25)', border: 'none', borderRadius: 20}}>
+        <Tag
+          style={{
+            marginTop: 8,
+            fontSize: 12,
+            color: '#6993FF',
+            background: 'rgb(105, 147, 255, 0.25)',
+            border: 'none',
+            borderRadius: 20,
+          }}
+        >
           Type: {song ? song.type : ''}
         </Tag>
         <Flex style={{ marginTop: 8 }}>
@@ -55,5 +64,3 @@ const GeneralInfo = () => {
 }
 
 export default GeneralInfo
-
-// margin="8px 0 0" fontSize="12px" color="#8E8F92"

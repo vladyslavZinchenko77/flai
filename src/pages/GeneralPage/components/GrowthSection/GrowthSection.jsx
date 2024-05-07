@@ -47,12 +47,7 @@ const data = [
   { name: 'FR', 'Growth': 0, 'AI Prediction': 0 },
 ]
 
-
 const GrowthSection = () => {
-
-
-
-
   return (
     <SectionContainer>
       <SectionTitle icon={<SvgIcon name={'growth'} />}>

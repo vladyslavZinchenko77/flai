@@ -9,8 +9,6 @@ import {
   Legend,
 } from 'recharts'
 
-
-
 const Chart = ({ data, ...props }) => {
   const chartContainerRef = useRef(null)
   const [chartWidth, setChartWidth] = useState(0)
@@ -52,7 +50,12 @@ const Chart = ({ data, ...props }) => {
           tickFormatter={formatYAxis}
         />
         <Tooltip />
-        <Legend layout="horizontal" align="right" verticalAlign="bottom"  iconType="circle" />
+        <Legend
+          layout="horizontal"
+          align="right"
+          verticalAlign="bottom"
+          iconType="circle"
+        />
         <Bar
           dataKey="Growth"
           stackId="a"
@@ -62,11 +65,8 @@ const Chart = ({ data, ...props }) => {
         <Bar
           dataKey="AI Prediction"
           stackId="a"
-          
           fill="#D1FD0A"
           label={{ formatter: formatYAxis, position: 'inside' }}
-          
-
         />
       </BarChart>
     </div>

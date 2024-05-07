@@ -1,34 +1,34 @@
-import styled from 'styled-components';
-import SvgIcon from '../../../../components/Common/SvgIcon/SvgIcon';
+import styled from 'styled-components'
+import SvgIcon from '../../../../components/Common/SvgIcon/SvgIcon'
 
 const SectionContainer = styled.div`
   padding: 0 40px;
-`;
+`
 
 const HeaderWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
+`
 
 const HeaderTitle = styled.h4`
   color: rgb(64, 64, 68);
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
-`;
+`
 
 const HeaderUpdateGroup = styled.div`
   display: flex;
-`;
+`
 
 const HeaderUpdateTextGroup = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-right: 28px;
-`;
+`
 
 const HeaderUpdateInfo = styled.p`
   color: rgb(55, 55, 58);
@@ -36,11 +36,11 @@ const HeaderUpdateInfo = styled.p`
   font-family: Montserrat;
   font-weight: 700;
   line-height: 2;
-`;
+`
 
 const HeaderBtnGroup = styled.div`
   display: flex;
-`;
+`
 
 const HeaderBtn = styled.button`
   display: flex;
@@ -56,17 +56,16 @@ const HeaderBtn = styled.button`
   font-weight: 600;
   line-height: 1.6;
   cursor: pointer;
-  transition:0.2s;
+  transition: 0.2s;
   &:first-child {
     margin-right: 30px;
   }
 
   &:hover {
-    color: white; 
-    transition:0.2s;
-    
+    color: white;
+    transition: 0.2s;
   }
-`;
+`
 
 const GeneralPageHeader = () => {
   return (
@@ -92,7 +91,7 @@ const GeneralPageHeader = () => {
         </HeaderUpdateGroup>
       </HeaderWrapper>
     </SectionContainer>
-  );
-};
+  )
+}
 
-export default GeneralPageHeader;
+export default GeneralPageHeader

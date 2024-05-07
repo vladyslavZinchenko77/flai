@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const ColapseBtnContainer = styled.button`
   display: flex;
@@ -23,11 +23,11 @@ const ColapseBtnContainer = styled.button`
       stroke: #ffffff;
     }
   }
-`;
+`
 
 const ColapseBtn = () => {
   return (
-    <ColapseBtnContainer type='button'>
+    <ColapseBtnContainer type="button">
       <svg
         width="6"
         height="23"
@@ -47,7 +47,7 @@ const ColapseBtn = () => {
         />
       </svg>
     </ColapseBtnContainer>
-  );
-};
+  )
+}
 
-export default ColapseBtn;
+export default ColapseBtn
