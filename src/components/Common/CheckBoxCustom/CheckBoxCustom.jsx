@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
 const CheckBoxContainer = styled.div`
   margin: ${(props) => props.margin};
@@ -9,7 +9,8 @@ const CheckBoxContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   .checked {
     width: 50%;
     height: 10%;
@@ -21,28 +22,26 @@ const CheckBoxContainer = styled.div`
     background-color: #d1fd0a;
   }
   .disable {
-    background-color: none;
+    background-color: none; /* добавленный стиль */
   }
-`
+`;
 
-const CheckBoxCustom = ({
-  margin,
-  defaultChecked = false,
-  disabled = false,
-}) => {
-  const [isChecked, setIsChecked] = useState(defaultChecked)
+const CheckBoxCustom = ({ margin, defaultChecked = false, disabled = false, onClick }) => {
+  const [isChecked, setIsChecked] = useState(defaultChecked);
 
   return (
     <CheckBoxContainer
       margin={margin}
       disabled={disabled}
       onClick={() => {
-        setIsChecked(!isChecked)
+        if (!disabled) {
+          setIsChecked(!isChecked);
+        }
       }}
     >
-      <div className={isChecked ? 'checked' : 'no-checked'}></div>
+      <div className={!disabled ? (isChecked ? 'checked' : 'no-checked') : ('disable')}></div>
     </CheckBoxContainer>
-  )
-}
+  );
+};
 
-export default CheckBoxCustom
+export default CheckBoxCustom;
