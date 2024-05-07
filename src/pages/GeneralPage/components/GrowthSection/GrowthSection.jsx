@@ -32,7 +32,27 @@ const IconContainer = styled.div`
   z-index: 5;
 `
 
+const data = [
+  { name: 'MO', 'Growth': 50000, 'AI Prediction': 0 },
+  { name: 'TU', 'Growth': 70000, 'AI Prediction': 0 },
+  { name: 'WE', 'Growth': 100000, 'AI Prediction': 0 },
+  { name: 'TH', 'Growth': 120000, 'AI Prediction': 150000 },
+  { name: 'FR', 'Growth': 180000, 'AI Prediction': 200000 },
+  { name: 'SA', 'Growth': 250000, 'AI Prediction': 220000 },
+  { name: 'SU', 'Growth': 300000, 'AI Prediction': 240000 },
+  { name: 'MO', 'Growth': 0, 'AI Prediction': 320000 },
+  { name: 'TU', 'Growth': 0, 'AI Prediction': 380000 },
+  { name: 'WE', 'Growth': 0, 'AI Prediction': 0 },
+  { name: 'TH', 'Growth': 0, 'AI Prediction': 0 },
+  { name: 'FR', 'Growth': 0, 'AI Prediction': 0 },
+]
+
+
 const GrowthSection = () => {
+
+
+
+
   return (
     <SectionContainer>
       <SectionTitle icon={<SvgIcon name={'growth'} />}>
@@ -74,7 +94,7 @@ const GrowthSection = () => {
           </CustomText>
         </GrowthHeaderItem>
       </GrowthHeader>
-      <Chart style={{ marginTop: 24 }} />
+      <Chart style={{ marginTop: 24 }} data={data} />
     </SectionContainer>
   )
 }
