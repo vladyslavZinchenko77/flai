@@ -18,9 +18,11 @@ const HeaderTitle = styled.h4`
   font-weight: 700;
   line-height: 20px;
 `
+
 const HeaderUpdateGroup = styled.div`
   display: flex;
 `
+
 const HeaderUpdateTextGroup = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,6 +37,7 @@ const HeaderUpdateInfo = styled.p`
   font-weight: 700;
   line-height: 2;
 `
+
 const HeaderBtnGroup = styled.div`
   display: flex;
 `
@@ -53,8 +56,14 @@ const HeaderBtn = styled.button`
   font-weight: 600;
   line-height: 1.6;
   cursor: pointer;
+  transition: 0.2s;
   &:first-child {
     margin-right: 30px;
+  }
+
+  &:hover {
+    color: white;
+    transition: 0.2s;
   }
 `
 

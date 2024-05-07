@@ -1,4 +1,3 @@
-
 // import React from 'react'
 // import { useState } from 'react'
 // import styled from 'styled-components'
@@ -53,7 +52,7 @@
 
 // const BaseTab = () => {
 
-//   const { recomendations } = useRecomendationsList(); 
+//   const { recomendations } = useRecomendationsList();
 
 //   return (
 //     <>
@@ -107,14 +106,12 @@
 
 // export default BaseTab
 
-
-
 import React from 'react'
 import styled from 'styled-components'
 import CheckBoxCustom from '../../../../../components/Common/CheckBoxCustom/CheckBoxCustom'
 import CustomText from '../../../../../components/Common/CustomText/CustomText'
 import SvgIcon from '../../../../../components/Common/SvgIcon/SvgIcon'
-import { useRecomendationsList } from "../../../../../store/store"
+import { useRecomendationsList } from '../../../../../store/store'
 
 const FollowRecomendationsContainer = styled.div`
   padding: 10px 0;
@@ -149,12 +146,10 @@ const RecomendationSubItem = styled.div`
   display: flex;
   align-items: center;
   margin-top: 20px;
-  .subitem-line{
+  .subitem-line {
     position: relative;
     bottom: 5px;
   }
-  
-
 `
 
 const RecomendationItemNoActiveWrap = styled.div`
@@ -170,7 +165,7 @@ const RecomendationItemNoActive = styled.div`
 `
 
 const BaseTab = () => {
-  const { recomendations } = useRecomendationsList(); 
+  const { recomendations } = useRecomendationsList()
 
   return (
     <>
@@ -188,9 +183,7 @@ const BaseTab = () => {
             {recomendation.isOpen ? (
               <RecomendationItem>
                 <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={false} />
-                <CustomText color="#FFFFFF">
-                  {recomendation.main}
-                </CustomText>
+                <CustomText color="#FFFFFF">{recomendation.main}</CustomText>
               </RecomendationItem>
             ) : (
               <RecomendationItemNoActiveWrap>
@@ -206,15 +199,18 @@ const BaseTab = () => {
                 </RecomendationItemNoActive>
               </RecomendationItemNoActiveWrap>
             )}
-            {recomendation.secondary && recomendation.secondary.map((secondary, index) => (
-              <RecomendationSubItem key={index}>
-                <SvgIcon className='subitem-line' name="subitem-line" margin={'0 10px 0 10px'} />
-                <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={true} />
-                <CustomText color="#FFFFFF">
-                  {secondary}
-                </CustomText>
-              </RecomendationSubItem>
-            ))}
+            {recomendation.secondary &&
+              recomendation.secondary.map((secondary, index) => (
+                <RecomendationSubItem key={index}>
+                  <SvgIcon
+                    className="subitem-line"
+                    name="subitem-line"
+                    margin={'0 10px 0 10px'}
+                  />
+                  <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={true} />
+                  <CustomText color="#FFFFFF">{secondary}</CustomText>
+                </RecomendationSubItem>
+              ))}
           </div>
         ))}
       </RecomendationsGroup>

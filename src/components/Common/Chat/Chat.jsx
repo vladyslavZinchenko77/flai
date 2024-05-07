@@ -38,8 +38,8 @@ const PremiumBannerBtn = styled.button`
 `
 
 const InputWrapper = styled.div`
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 24px;
   right: 0;
   left: 74%;
   display: flex;
