@@ -6,6 +6,10 @@ import avatarimg from '../../../../src/assets/jpg/animoji.jpeg'
 import avatarAiimg from '../../../../src/assets/jpg/ai.jpeg'
 import SvgIcon from '../SvgIcon/SvgIcon'
 
+const ChatContainer = styled.div`
+  width: 26%;
+`
+
 const PremiumBanner = styled.div`
   width: 100%;
   padding: 20px 0 20px 20px;
@@ -34,6 +38,10 @@ const PremiumBannerBtn = styled.button`
 `
 
 const InputWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 74%;
   display: flex;
   align-items: center;
   background-color: #212122;
@@ -41,7 +49,6 @@ const InputWrapper = styled.div`
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
-  margin-top: 20px;
 `
 
 const Input = styled.input`
@@ -51,7 +58,7 @@ const Input = styled.input`
   outline: none;
   color: #fff;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   &::placeholder {
     color: #ccc;
   }
@@ -75,7 +82,7 @@ export const Chat = () => {
   }
 
   return (
-    <div>
+    <ChatContainer>
       <PremiumBanner>
         <CustomText fontsize="10px" color="#6F8800">
           Free Plan
@@ -112,6 +119,6 @@ export const Chat = () => {
           </span>
         </SendButton>
       </InputWrapper>
-    </div>
+    </ChatContainer>
   )
 }

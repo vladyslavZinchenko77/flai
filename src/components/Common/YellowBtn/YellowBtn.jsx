@@ -9,7 +9,7 @@ const YellowBtnStyled = styled.button`
   font-weight: 700;
   line-height: 1.6;
   border-radius: 20px;
-  border:none;
+  border: none;
   cursor: pointer;
   transition: 0.2s;
   &:hover {
@@ -18,7 +18,7 @@ const YellowBtnStyled = styled.button`
   }
 `
 
-const YellowBtn = ({ children, onClick,margin, ...props }) => {
+const YellowBtn = ({ children, onClick, margin, ...props }) => {
   return (
     <YellowBtnStyled type="button" onClick={onClick} margin={margin} {...props}>
       {children}

@@ -6,7 +6,7 @@ import Flex from '../../components/Common/Flex/Flex'
 
 const Dashbord = () => {
   return (
-    <Flex alignItems={'flex-start'}>
+    <Flex alignItems={'flex-start'} justifyContent="space-between">
       <Sidebar />
       <GeneralPage />
       <Chat />
