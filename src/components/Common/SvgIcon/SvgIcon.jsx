@@ -26,6 +26,10 @@ import bellClipartIcon from '../../../assets/svg/bell-clipart.svg'
 import starsIcon from '../../../assets/svg/stars.svg'
 import linSubItemIcon from '../../../assets/svg/line-subitem.svg'
 import plaineIcon from '../../../assets/svg/plane.svg'
+import growthIcon from '../../../assets/svg/growth.svg'
+import likeIcon from '../../../assets/svg/like.svg'
+import constelattionIcon from '../../../assets/svg/constellation.svg'
+import geolocationIcon from '../../../assets/svg/geolocation.svg'
 
 const IconImg = styled.img`
   margin: ${(props) => props.margin};
@@ -58,6 +62,10 @@ const SvgIcon = ({ name, margin, ...props }) => {
     'stars': starsIcon,
     'subitem-line': linSubItemIcon,
     'plane': plaineIcon,
+    'growth': growthIcon,
+    'like': likeIcon,
+    'constellation': constelattionIcon,
+    'geolocation': geolocationIcon,
   }
 
   const iconUrl = icons[name]

@@ -36,8 +36,8 @@ const RecomendationSubItem = styled.div`
   margin-top: 20px;
 `
 
-const RecomendationItemNoActiveWrap= styled.div`
-display: inline-block;
+const RecomendationItemNoActiveWrap = styled.div`
+  display: inline-block;
 `
 
 const RecomendationItemNoActive = styled.div`
@@ -96,12 +96,12 @@ const BaseTab = () => {
         </Recomendation>
         <Recomendation>
           <RecomendationItemNoActiveWrap>
-          <RecomendationItemNoActive>
-            <CheckBoxCustom margin={'0 10px 0 0'} />
-            <CustomText fontsize="12px" color="#8E8F92">
-              Release day
-            </CustomText>
-          </RecomendationItemNoActive>
+            <RecomendationItemNoActive>
+              <CheckBoxCustom margin={'0 10px 0 0'} />
+              <CustomText fontsize="12px" color="#8E8F92">
+                Release day
+              </CustomText>
+            </RecomendationItemNoActive>
           </RecomendationItemNoActiveWrap>
         </Recomendation>
         <Recomendation>
@@ -112,30 +112,30 @@ const BaseTab = () => {
         </Recomendation>
         <Recomendation>
           <RecomendationItemNoActiveWrap>
-          <RecomendationItemNoActive>
-            <CheckBoxCustom margin={'0 10px 0 0'} />
-            <CustomText fontsize="12px" color="#8E8F92">
-              Duet
-            </CustomText>
-            <SvgIcon name={'lock'} margin={'0 6px 0 20px'} />
-            <CustomText fontsize="12px" color="#D1FD0A">
-              Coming Soon
-            </CustomText>
-          </RecomendationItemNoActive>
+            <RecomendationItemNoActive>
+              <CheckBoxCustom margin={'0 10px 0 0'} />
+              <CustomText fontsize="12px" color="#8E8F92">
+                Duet
+              </CustomText>
+              <SvgIcon name={'lock'} margin={'0 6px 0 20px'} />
+              <CustomText fontsize="12px" color="#D1FD0A">
+                Coming Soon
+              </CustomText>
+            </RecomendationItemNoActive>
           </RecomendationItemNoActiveWrap>
         </Recomendation>
         <Recomendation>
           <RecomendationItemNoActiveWrap>
-          <RecomendationItemNoActive>
-            <CheckBoxCustom margin={'0 10px 0 0'} />
-            <CustomText fontsize="12px" color="#8E8F92">
-              The best location for the potential of your sound
-            </CustomText>
-            <SvgIcon name={'lock'} margin={'0 6px 0 20px'} />
-            <CustomText fontsize="12px" color="#D1FD0A">
-              Coming Soon
-            </CustomText>
-          </RecomendationItemNoActive>
+            <RecomendationItemNoActive>
+              <CheckBoxCustom margin={'0 10px 0 0'} />
+              <CustomText fontsize="12px" color="#8E8F92">
+                The best location for the potential of your sound
+              </CustomText>
+              <SvgIcon name={'lock'} margin={'0 6px 0 20px'} />
+              <CustomText fontsize="12px" color="#D1FD0A">
+                Coming Soon
+              </CustomText>
+            </RecomendationItemNoActive>
           </RecomendationItemNoActiveWrap>
         </Recomendation>
       </RecomendationsGroup>
