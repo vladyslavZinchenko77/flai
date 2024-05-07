@@ -24,7 +24,7 @@ const data = [
   { name: 'FR', 'Growth': 0, 'AI Prediction': 0 },
 ]
 
-const Chart = () => {
+const Chart = ({ ...props }) => {
   const chartContainerRef = useRef(null)
   const [chartWidth, setChartWidth] = useState(0)
 
@@ -46,7 +46,11 @@ const Chart = () => {
   }
 
   return (
-    <div ref={chartContainerRef} style={{ width: '100%', height: 300 }}>
+    <div
+      ref={chartContainerRef}
+      style={{ width: '100%', height: 300 }}
+      {...props}
+    >
       <BarChart
         width={chartWidth}
         height={300}

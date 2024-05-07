@@ -1,8 +1,11 @@
+
+import React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import CheckBoxCustom from '../../../../../components/Common/CheckBoxCustom/CheckBoxCustom'
 import CustomText from '../../../../../components/Common/CustomText/CustomText'
 import SvgIcon from '../../../../../components/Common/SvgIcon/SvgIcon'
+import {useRecomendationsList } from "../../../../../store/store"
 
 const FollowRecomendationsContainer = styled.div`
   padding: 10px 0;
@@ -49,7 +52,8 @@ const RecomendationItemNoActive = styled.div`
 `
 
 const BaseTab = () => {
-  const [isShowDuration, setIsShowDuration] = useState(true)
+
+  const { recomendations } = useRecomendationsList(); 
 
   return (
     <>
@@ -62,82 +66,40 @@ const BaseTab = () => {
         </FollowRecomendations>
       </FollowRecomendationsContainer>
       <RecomendationsGroup>
-        <Recomendation>
-          <RecomendationItem>
-            <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={false} />
-            <CustomText color="#FFFFFF">
-              02:15 Recommendations for your song
-            </CustomText>
-          </RecomendationItem>
-        </Recomendation>
-        <Recomendation>
-          <RecomendationItem>
-            <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={true} />
-            <CustomText color="#FFFFFF">
-              Duration for segments of your sound promo
-            </CustomText>
-          </RecomendationItem>
-          <RecomendationSubItem>
-            <SvgIcon name="subitem-line" margin={'0 10px 0 10px'} />
-            <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={true} />
-
-            <CustomText color="#FFFFFF">
-              Duration for segments of your sound promo
-            </CustomText>
-          </RecomendationSubItem>
-          <RecomendationSubItem>
-            <SvgIcon name="subitem-line" margin={'0 10px 0 10px'} />
-            <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={false} />
-
-            <CustomText color="#FFFFFF">
-              Duration for segments of your sound promo
-            </CustomText>
-          </RecomendationSubItem>
-        </Recomendation>
-        <Recomendation>
-          <RecomendationItemNoActiveWrap>
-            <RecomendationItemNoActive>
-              <CheckBoxCustom margin={'0 10px 0 0'} />
-              <CustomText fontsize="12px" color="#8E8F92">
-                Release day
-              </CustomText>
-            </RecomendationItemNoActive>
-          </RecomendationItemNoActiveWrap>
-        </Recomendation>
-        <Recomendation>
-          <RecomendationItem>
-            <CheckBoxCustom margin={'0 10px 0 0'} />
-            <CustomText color="#FFFFFF">Promotion</CustomText>
-          </RecomendationItem>
-        </Recomendation>
-        <Recomendation>
-          <RecomendationItemNoActiveWrap>
-            <RecomendationItemNoActive>
-              <CheckBoxCustom margin={'0 10px 0 0'} />
-              <CustomText fontsize="12px" color="#8E8F92">
-                Duet
-              </CustomText>
-              <SvgIcon name={'lock'} margin={'0 6px 0 20px'} />
-              <CustomText fontsize="12px" color="#D1FD0A">
-                Coming Soon
-              </CustomText>
-            </RecomendationItemNoActive>
-          </RecomendationItemNoActiveWrap>
-        </Recomendation>
-        <Recomendation>
-          <RecomendationItemNoActiveWrap>
-            <RecomendationItemNoActive>
-              <CheckBoxCustom margin={'0 10px 0 0'} />
-              <CustomText fontsize="12px" color="#8E8F92">
-                The best location for the potential of your sound
-              </CustomText>
-              <SvgIcon name={'lock'} margin={'0 6px 0 20px'} />
-              <CustomText fontsize="12px" color="#D1FD0A">
-                Coming Soon
-              </CustomText>
-            </RecomendationItemNoActive>
-          </RecomendationItemNoActiveWrap>
-        </Recomendation>
+        {recomendations.map((recomendation, index) => (
+          <Recomendation key={index}>
+            {recomendation.isOpen ? (
+              <RecomendationItem>
+                <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={false} />
+                <CustomText color="#FFFFFF">
+                  {recomendation.main}
+                </CustomText>
+              </RecomendationItem>
+            ) : (
+              <RecomendationItemNoActiveWrap>
+                <RecomendationItemNoActive>
+                  <CheckBoxCustom margin={'0 10px 0 0'} />
+                  <CustomText fontsize="12px" color="#8E8F92">
+                    {recomendation.main}
+                  </CustomText>
+                  <SvgIcon name="lock" margin="0 6px" />
+                  <CustomText fontsize="12px" color="#D1FD0A">
+                    Coming Soon
+                  </CustomText>
+                </RecomendationItemNoActive>
+              </RecomendationItemNoActiveWrap>
+            )}
+            {recomendation.secondary && recomendation.secondary.map((secondary, index) => (
+              <RecomendationSubItem key={index}>
+                <SvgIcon name="subitem-line" margin={'0 10px 0 10px'} />
+                <CheckBoxCustom margin={'0 10px 0 0'} defaultChecked={true} />
+                <CustomText color="#FFFFFF">
+                  {secondary}
+                </CustomText>
+              </RecomendationSubItem>
+            ))}
+          </Recomendation>
+        ))}
       </RecomendationsGroup>
     </>
   )

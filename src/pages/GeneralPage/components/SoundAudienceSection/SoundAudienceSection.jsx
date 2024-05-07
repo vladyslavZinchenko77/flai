@@ -3,17 +3,10 @@ import styled from 'styled-components'
 import HorizontalProgress from '../../../../components/Common/HorizontalProgress/HorizontalProgress'
 import Flex from '../../../../components/Common/Flex/Flex'
 import SectionTitle from '../../../../components/Common/SectionTitle/SectionTitle'
+import { useUserStore } from '../../../../store/store'
 
 const SectionContainer = styled.div`
   padding: 0 40px;
-`
-
-const SectionTitleStyled = styled.h4`
-  color: rgb(255, 255, 255);
-  font-family: Montserrat;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.5;
 `
 
 const PrograssesContainer = styled.div`
@@ -21,6 +14,10 @@ const PrograssesContainer = styled.div`
 `
 
 const SoundAudienceSection = () => {
+  const { user } = useUserStore()
+
+  const soundAudience = user.songs.length > 0 ? user.songs[0].soundAudience : []
+
   return (
     <SectionContainer>
       <section>
@@ -28,40 +25,30 @@ const SoundAudienceSection = () => {
           Sound Audience
         </SectionTitle>
 
-        <Flex justifyContent="space-between" margin="30px 0 0 0">
+        <Flex
+          justifyContent="space-between"
+          alignItems="flex-start"
+          margin="30px 0 0 0"
+        >
           <PrograssesContainer>
-            <HorizontalProgress
-              icon={<SvgIcon name={'beauty'} />}
-              progress={40}
-              label={'Beauty'}
-            />
-            <HorizontalProgress
-              icon={<SvgIcon name={'music'} />}
-              progress={31}
-              label={'Music'}
-            />
-            <HorizontalProgress
-              icon={<SvgIcon name={'travel'} />}
-              progress={22}
-              label={'Travel'}
-            />
+            {soundAudience.slice(0, 3).map((audience, index) => (
+              <HorizontalProgress
+                key={index}
+                icon={<SvgIcon name={audience.title.toLowerCase()} />}
+                progress={audience.percent}
+                label={audience.title}
+              />
+            ))}
           </PrograssesContainer>
           <PrograssesContainer>
-            <HorizontalProgress
-              icon={<SvgIcon name={'show'} />}
-              progress={14}
-              label={'Show'}
-            />
-            <HorizontalProgress
-              icon={<SvgIcon name={'health'} />}
-              progress={9}
-              label={'Health'}
-            />
-            <HorizontalProgress
-              icon={<SvgIcon name={'other'} />}
-              progress={6}
-              label={'Other'}
-            />
+            {soundAudience.slice(3).map((audience, index) => (
+              <HorizontalProgress
+                key={index}
+                icon={<SvgIcon name={audience.title.toLowerCase()} />}
+                progress={audience.percent}
+                label={audience.title}
+              />
+            ))}
           </PrograssesContainer>
         </Flex>
       </section>

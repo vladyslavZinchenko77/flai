@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Flex from '../Flex/Flex'
 
 const ProgressContainer = styled.div`
+  margin-top: 19px;
   display: flex;
   flex-direction: column;
 
@@ -9,7 +10,7 @@ const ProgressContainer = styled.div`
 `
 
 const ProgressBar = styled.div`
-  margin-top: 19px;
+  margin-top: 6px;
   height: 4px;
   padding: 2px;
   background-color: #333333;

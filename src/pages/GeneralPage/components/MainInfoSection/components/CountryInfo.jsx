@@ -1,8 +1,11 @@
 import CustomText from '../../../../../components/Common/CustomText/CustomText'
 import Flex from '../../../../../components/Common/Flex/Flex'
 import SvgIcon from '../../../../../components/Common/SvgIcon/SvgIcon'
+import { useUserStore } from '../../../../../store/store'
 
 const CountryInfo = () => {
+  const { user } = useUserStore()
+
   return (
     <div>
       <Flex>
@@ -10,7 +13,7 @@ const CountryInfo = () => {
           Country:
         </CustomText>
         <CustomText margin="0 0 0 10px" fontSize="12px" color="#FFFFFF">
-          Canada
+          {user.country}
         </CustomText>
         <SvgIcon name={'canada'} margin="0 0 0 9px" />
       </Flex>
@@ -20,7 +23,7 @@ const CountryInfo = () => {
           Place in the country:
         </CustomText>
         <CustomText margin="0 0 0 6px" fontSize="12px" color="#FFFFFF">
-          05
+          {user.songs.length > 0 ? user.songs[0].placeInTheCountry : ''}
         </CustomText>
       </Flex>
 
@@ -29,7 +32,7 @@ const CountryInfo = () => {
           Place in the world:
         </CustomText>
         <CustomText margin="0 0 0 6px" fontSize="12px" color="#FFFFFF">
-          43
+          {user.songs.length > 0 ? user.songs[0].placeInTheWorld : ''}
         </CustomText>
       </Flex>
     </div>
