@@ -10,6 +10,7 @@ const SectionContainer = styled.div`
   margin-top: 56px;
 `
 const GrowthHeader = styled.div`
+  margin-top: 16px;
   display: flex;
   justify-content: center;
 `
@@ -73,7 +74,7 @@ const GrowthSection = () => {
           </CustomText>
         </GrowthHeaderItem>
       </GrowthHeader>
-      <Chart />
+      <Chart style={{ marginTop: 24 }} />
     </SectionContainer>
   )
 }

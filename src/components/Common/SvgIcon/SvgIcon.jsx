@@ -19,6 +19,7 @@ import beautyIcon from '../../../assets/svg/beauty.svg'
 import musicIcon from '../../../assets/svg/music.svg'
 import travelIcon from '../../../assets/svg/travel.svg'
 import showIcon from '../../../assets/svg/show.svg'
+import sportIcon from '../../../assets/svg/sport.svg'
 import healthIcon from '../../../assets/svg/health.svg'
 import otherIcon from '../../../assets/svg/other.svg'
 import relatedIcon from '../../../assets/svg/related.svg'
@@ -55,6 +56,7 @@ const SvgIcon = ({ name, margin, ...props }) => {
     'music': musicIcon,
     'travel': travelIcon,
     'show': showIcon,
+    'sport': sportIcon,
     'health': healthIcon,
     'other': otherIcon,
     'related': relatedIcon,
