@@ -9,20 +9,7 @@ import {
   Legend,
 } from 'recharts'
 
-// const data = [
-//   { name: 'MO', 'Growth': 50000, 'AI Prediction': 0 },
-//   { name: 'TU', 'Growth': 70000, 'AI Prediction': 0 },
-//   { name: 'WE', 'Growth': 100000, 'AI Prediction': 0 },
-//   { name: 'TH', 'Growth': 120000, 'AI Prediction': 150000 },
-//   { name: 'FR', 'Growth': 180000, 'AI Prediction': 200000 },
-//   { name: 'SA', 'Growth': 250000, 'AI Prediction': 220000 },
-//   { name: 'SU', 'Growth': 300000, 'AI Prediction': 240000 },
-//   { name: 'MO', 'Growth': 0, 'AI Prediction': 320000 },
-//   { name: 'TU', 'Growth': 0, 'AI Prediction': 380000 },
-//   { name: 'WE', 'Growth': 0, 'AI Prediction': 0 },
-//   { name: 'TH', 'Growth': 0, 'AI Prediction': 0 },
-//   { name: 'FR', 'Growth': 0, 'AI Prediction': 0 },
-// ]
+
 
 const Chart = ({ data, ...props }) => {
   const chartContainerRef = useRef(null)
@@ -65,7 +52,7 @@ const Chart = ({ data, ...props }) => {
           tickFormatter={formatYAxis}
         />
         <Tooltip />
-        <Legend />
+        <Legend layout="horizontal" align="right" verticalAlign="bottom"  iconType="circle" />
         <Bar
           dataKey="Growth"
           stackId="a"
@@ -75,8 +62,11 @@ const Chart = ({ data, ...props }) => {
         <Bar
           dataKey="AI Prediction"
           stackId="a"
+          
           fill="#D1FD0A"
-          label={{ formatter: formatYAxis, position: 'top' }}
+          label={{ formatter: formatYAxis, position: 'inside' }}
+          
+
         />
       </BarChart>
     </div>
